@@ -3,9 +3,9 @@
 namespace Graze\WipotecCheckweigherClient\Tests\Request;
 
 use Graze\WipotecCheckweigherClient\TelnetPromptMatcher;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class TelnetPromptMatcherTest extends TestCase
+class TelnetPromptMatcherTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @return mixed[]

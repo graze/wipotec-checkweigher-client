@@ -3,9 +3,9 @@
 namespace Graze\WipotecCheckweigherClient\Tests;
 
 use Graze\WipotecCheckweigherClient\Parameter;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class ParameterTest extends TestCase
+class ParameterTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @return mixed[]

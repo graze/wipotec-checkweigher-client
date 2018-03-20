@@ -12,9 +12,9 @@ use Graze\WipotecCheckweigherClient\Response\ResponseGeneric;
 use Graze\WipotecCheckweigherClient\Response\ResponseReadStatus;
 use Graze\WipotecCheckweigherClient\TelnetPromptMatcher;
 use Mockery;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 
-class ClientTest extends TestCase
+class ClientTest extends PHPUnit_Framework_TestCase
 {
     public function testConnect()
     {
