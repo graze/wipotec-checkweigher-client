@@ -2,8 +2,6 @@
 
 namespace Graze\WipotecCheckweigherClient\Request;
 
-use Graze\Dispatch\Checkweigher\Client\Parameter;
-
 class RequestChangeArticle extends AbstractRequestArticle
 {
     /** @var bool */

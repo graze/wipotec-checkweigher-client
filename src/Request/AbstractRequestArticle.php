@@ -2,7 +2,7 @@
 
 namespace Graze\WipotecCheckweigherClient\Request;
 
-use Graze\Dispatch\Checkweigher\Client\Parameter;
+use Graze\WipotecCheckweigherClient\Parameter;
 
 abstract class AbstractRequestArticle extends AbstractRequest
 {
