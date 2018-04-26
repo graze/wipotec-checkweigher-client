@@ -21,6 +21,7 @@ class Parameter
     const TO = 296;
     const TO1 = 22;
     const TO2 = 23;
+    const TU = 295;
     const TU1 = 20;
     const TU2 = 19;
     const UNDERWEIGHT = 32;
