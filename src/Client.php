@@ -28,10 +28,11 @@ class Client implements ClientInterface
 
     /**
      * @param string $dsn
+     * @param float|null $timeout
      */
-    public function connect($dsn)
+    public function connect($dsn, $timeout = null)
     {
-        $this->telnetClient->connect($dsn, null, self::PROMPT_ERROR, '');
+        $this->telnetClient->connect($dsn, null, self::PROMPT_ERROR, '', $timeout);
     }
 
     /**
