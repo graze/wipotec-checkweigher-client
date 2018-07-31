@@ -19,14 +19,22 @@ class ClientTest extends PHPUnit_Framework_TestCase
     public function testConnect()
     {
         $dsn = '127.0.0.1:55001';
+        $timeout = 1.2;
 
         $telnetClient = Mockery::mock(TelnetClientInterface::class);
-        $telnetClient->shouldReceive('connect')
-            ->with($dsn, null, Client::PROMPT_ERROR, '')
-            ->once();
-
         $client = new Client($telnetClient);
+
+        // Connecting without timeout
+        $telnetClient->shouldReceive('connect')
+            ->with($dsn, null, Client::PROMPT_ERROR, '', null)
+            ->once();
         $client->connect($dsn);
+
+        // Connecting with timeout
+        $telnetClient->shouldReceive('connect')
+            ->with($dsn, null, Client::PROMPT_ERROR, '', $timeout)
+            ->once();
+        $client->connect($dsn, $timeout);
     }
 
     /**
