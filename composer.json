@@ -23,7 +23,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "graze/telnet-client": "^2.0.3",
+        "graze/telnet-client": "^2.1.0",
         "graze/xml-utils": "^1.1.0"
     },
     "require-dev": {
