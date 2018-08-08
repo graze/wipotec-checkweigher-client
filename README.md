@@ -1,4 +1,4 @@
-# wipotec-checkweigher-client
+# Wipotec Checkweigher Client
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/graze/wipotec-checkweigher-client.svg?style=flat-square)](https://packagist.org/packages/graze/wipotec-checkweigher-client)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
