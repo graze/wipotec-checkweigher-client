@@ -32,8 +32,8 @@ class AbstractResponse implements ResponseInterface
 
         if ($telnetResponse->isError()) {
             $error = 'unknown';
-            if (!isset($xml['error_info']['error_text'])) {
-                $error = $xml['error_info']['error_text'];
+            if (isset($this->contents['error_info']['error_text'])) {
+                $error = $this->contents['error_info']['error_text'];
             }
 
             $this->setError('Telnet response error: '.$error);
