@@ -36,6 +36,14 @@ class Client implements ClientInterface
     }
 
     /**
+     * @param float $timeout
+     */
+    public function setReadTimeout($timeout)
+    {
+        $this->telnetClient->setReadTimeout($timeout);
+    }
+
+    /**
      * @param RequestInterface $request
      */
     public function sendRequest(RequestInterface $request)
