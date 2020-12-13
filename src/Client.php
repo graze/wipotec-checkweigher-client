@@ -24,6 +24,10 @@ class Client implements ClientInterface
     public function __construct(TelnetClientInterface $telnetClient)
     {
         $this->telnetClient = $telnetClient;
+
+        // Set a limit to the number of bytes to read per request, this should hopefully prevent infinite loops if the
+        // prompt is never returned. 1000 bytes should be plenty.
+        $this->telnetClient->setMaxBytesRead(1000);
     }
 
     /**

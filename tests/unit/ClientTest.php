@@ -22,6 +22,8 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $timeout = 1.2;
 
         $telnetClient = Mockery::mock(TelnetClientInterface::class);
+        $telnetClient->shouldReceive('setMaxBytesRead');
+
         $client = new Client($telnetClient);
 
         // Connecting without timeout
@@ -61,6 +63,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $telnetResponse = Mockery::mock(TelnetResponseInterface::class);
 
         $telnetClient = Mockery::mock(TelnetClientInterface::class);
+        $telnetClient->shouldReceive('setMaxBytesRead');
         $telnetClient->shouldReceive('execute')
             ->with($request->getXml())
             ->andReturn($telnetResponse);
